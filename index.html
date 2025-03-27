@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Surf Hero - Default browser changer for macOS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <script>
+      fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('navbar').innerHTML = data);
+    </script>
+    
+    <header>
+        <img src="assets/app-icon.png" alt="SurfHero App Icon" class="app-icon">
+        <div class="app-icon-text">
+            <p>Easily change your default browser on macOS with</p>
+            <p><b>The Surf Hero</b>!</p>
+        </div>
+    </header>
+
+    <section id="about" class="description">
+        <p>Tired of being stuck with the wrong browser for the task?</p>
+        <p>The Surf Hero makes it simple and fast to customize your default browser, putting you in control of your web experience.</p>
+    </section>
+    
+    <section class="images">
+        <img src="assets/screenshot-sf-1.png" alt="SurfHero Screenshot 1">
+        <img src="assets/screenshot-sf-2.png" alt="SurfHero Screenshot 2">
+        <img src="assets/screenshot-sf-3.png" alt="SurfHero Screenshot 3">
+    </section>
+
+    <div class="app-store-button">
+        <a href="https://apps.apple.com/ua/app/the-surf-hero/id6738626783" target="_blank">
+            <img src="assets/app-store-button.png">
+        </a>
+    </div>
+
+    <footer>
+        Copyright © 2025 Serhii Chornonoh
+    </footer>
+</body>
+</html>
