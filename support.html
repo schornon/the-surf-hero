@@ -8,15 +8,25 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="navbar"></div>
-    <script>
-      fetch('navbar.html')
-      .then(response => response.text())
-      .then(data => document.getElementById('navbar').innerHTML = data);
-    </script>
+
+    <nav>
+        <div class="nav-left" onclick="location.href='index.html'">
+            The Surf Hero
+            <div class="subtitle">Choose Your One!</div>
+        </div>
+        <div class="nav-right">
+            <a href="index.html">Home</a>
+            <a href="support.html" class="active">Support</a>
+            <a href="https://apps.apple.com/ua/app/the-surf-hero/id6738626783" class="btn">Get the app</a>
+        </div>
+    </nav>
 
     <section id="form" class="form">
         <iframe src="https://docs.google.com/forms/d/1ThOLG8sexPbg8BmR38knToCV1pVp4bXajfE2lyloxFE/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </section>
+
+    <footer>
+        Copyright © 2025 Serhii Chornonoh
+    </footer>
 </body>
 </html>
