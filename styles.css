@@ -101,6 +101,19 @@ header {
 .app-store-button img {
     width: 200px;
 }
+.faq {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.question {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
 footer {
     margin-top: 20px;
     padding: 20px 0;
