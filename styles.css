@@ -1,21 +1,32 @@
-p {
-    margin: 0;
+a {
+  color: #1e90ff;
+}
+a:visited {
+  color: #4e7397;
 }
 body {
     font-family: 'Nunito', sans-serif;
+    color: #FFFFFF;
     margin: 0;
     padding: 0;
-    background-color: #E7F1F4;
+    background-color: #000000;
     text-align: center;
 }
 nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #27586F;
     color: white;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 .nav-left {
     font-family: American Typewriter;
@@ -44,13 +55,6 @@ nav {
     margin: 4px 6px;
     font-size: 18px;
 }
-.nav-right .btn {
-    font-weight: bold;
-    background-color: white;
-    color: #27586F;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
 .nav-right .btn:hover {
     opacity: 0.7;
 }
@@ -66,6 +70,15 @@ header {
     align-items: center;
     justify-content: center;
     padding: 50px 0;
+}
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+header h2 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: lighter;
 }
 .app-icon {
     width: 250px;
@@ -84,15 +97,35 @@ header {
     margin: 20px auto;
     width: 60%;
 }
+.get-app-button {
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #007AFF;
+    color: #fff;
+    border-radius: 500px;
+    padding: 10px 20px;
+    margin: 40px 0 10px 0;
+    display: inline-block;
+}
+.get-app-button:visited {
+  color: #fff;
+}
 .images {
     margin: 40px auto;
-    width: 80%;
+    width: 100%;
+    background-color: #111;
+}
+.image-item {
+    padding: 30px 0;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: slideIn 0.8s forwards;
+    animation-delay: 0.5s;
 }
 .images img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
+    width: 60%;
+    max-width: 500px;
+    padding-top: 6px;
 }
 .app-store-button {
     display: inline-block;
@@ -105,19 +138,22 @@ header {
     max-width: 800px;
     margin: 40px auto;
     padding: 0 20px;
-    background-color: #fff;
+    background-color: #111;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .question {
     padding: 20px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #444;
     text-align: left;
+}
+.question:last-child {
+    border-bottom: 0;
 }
 footer {
     margin-top: 20px;
     padding: 20px 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #444;
     font-size: 14px;
     color: #666;
 }
@@ -125,6 +161,9 @@ footer {
     header {
         flex-direction: column;
         padding: 10px 0;
+    }
+    nav {
+        top: auto;
     }
     .app-icon {
         margin-right: 0;
@@ -148,4 +187,20 @@ footer {
         width: 100%;
         justify-content: center;
     }
+    .image-item {
+        padding: 20px 20px;
+    }
+    .images img {
+        width: 80%;
+    }
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
