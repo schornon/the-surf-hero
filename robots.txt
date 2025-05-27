@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://schornon.github.io/the-surf-hero/sitemap.xml
+Sitemap: https://the-surf-hero.csbrewed.com/sitemap.xml
